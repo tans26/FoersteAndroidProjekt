@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        TextView tiden = findViewById(R.id.aktuelTid);
+        tiden.setText("hurra du trykkede på knappen");
 
 
 
