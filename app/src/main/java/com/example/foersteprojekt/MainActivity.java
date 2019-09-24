@@ -11,13 +11,15 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    TextView tiden;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        TextView tiden = findViewById(R.id.aktuelTid);
+        tiden = findViewById(R.id.aktuelTid);
 
         String tidTekst = "" + new Date();
 
@@ -38,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        TextView tiden = findViewById(R.id.aktuelTid);
         tiden.setText("hurra du trykkede på knappen");
 
 
