@@ -2,6 +2,7 @@ package com.example.foersteprojekt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText nameInput;
 
-    Button okKnap;
+    Button button;
 
 
     @Override
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         nameInput = (EditText) findViewById(R.id.nameInput);
 
-        okKnap = (Button) findViewById(R.id.okKnap);
-        okKnap.setOnClickListener(new View.OnClickListener() {
+        button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
 
 
             @Override
             public void onClick(View v) {
                 name = nameInput.getText().toString();
+                Insend();
 
                 showToast(name);
 
@@ -45,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    public void Insend(){
+        Intent intent = new Intent (this, Activity2.class);
+        startActivity(intent);
+
+
+
+    }
+
 
     private void showToast(String text){
         Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();

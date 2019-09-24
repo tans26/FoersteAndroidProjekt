@@ -34,7 +34,7 @@
             tools:layout_editor_absoluteY="235dp" />
 
         <Button
-            android:id="@+id/okKnap"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Insend" />
