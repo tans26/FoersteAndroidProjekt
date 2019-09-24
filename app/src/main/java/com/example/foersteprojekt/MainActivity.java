@@ -5,43 +5,49 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Date;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView tiden;
+
+
+public class MainActivity extends AppCompatActivity {
+
+
+    String name;
+
+    EditText nameInput;
+
+    Button okKnap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        nameInput = (EditText) findViewById(R.id.nameInput);
 
-        tiden = findViewById(R.id.aktuelTid);
-
-        String tidTekst = "" + new Date();
-
-        tiden.setText(tidTekst);
+        okKnap = (Button) findViewById(R.id.okKnap);
+        okKnap.setOnClickListener(new View.OnClickListener() {
 
 
-        Button b = findViewById(R.id.knappen);
+            @Override
+            public void onClick(View v) {
+                name = nameInput.getText().toString();
 
-        b.setText("Tryk på mig");
+                showToast(name);
 
-        b.setOnClickListener(this);
-
-
-
-
+            }
+        });
 
     }
 
-    @Override
-    public void onClick(View v) {
-        tiden.setText("hurra du trykkede på knappen");
-
+    private void showToast(String text){
+        Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
 
 
     }
