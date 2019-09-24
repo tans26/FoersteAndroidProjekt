@@ -18,7 +18,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Indsæt dit navn"
+            android:text="First Text"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="145dp"
             tools:layout_editor_absoluteY="173dp" />
@@ -37,7 +37,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Insend" />
+            android:text="Open Acitivty 2" />
 
     </LinearLayout>
 
