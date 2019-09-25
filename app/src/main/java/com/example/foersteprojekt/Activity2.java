@@ -42,7 +42,9 @@ public class Activity2 extends AppCompatActivity implements View.OnClickListener
 
         } else if (v == button3) {
 
-            button3.setText("Du trykkede på mig. Tak!\n");
+            button3.setText("Viderestiller\n");
+
+            startActivity(new Intent(Activity2.this, Activity3.class));
 
         }
     }
